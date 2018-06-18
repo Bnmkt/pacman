@@ -17,9 +17,16 @@ export class Pickup{
         switch (this.type){
             case 1:
                 this.game.data.score++
+                this.game.data.pickupPicked++
+                this.game.playSound("eat", .05, 2);
                 break;
             case 2:
                 this.game.data.score+=5
+                this.game.data.pickupPicked++
+                this.game.playSound("eat", .05, 1.5);
+                this.game.data.monsters.forEach(enemy=>{
+                    enemy.setFragile();
+                })
                 break;
         }
     }

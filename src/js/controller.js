@@ -11,7 +11,8 @@ export const controller = {
         "ArrowLeft",
         "ArrowRight",
         "ArrowUp",
-        "ArrowDown"
+        "ArrowDown",
+        "Enter"
     ],
     init(){
         const md = (e)=>{

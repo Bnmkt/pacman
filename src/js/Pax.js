@@ -2,6 +2,8 @@ export class Pax {
     constructor(x, y) {
         this.x = x;
         this.y = y;
+        this.iX = x;
+        this.iY = y;
         this.sprite = new Image();
         this.spriteSheet = this.sprite.src = "assets/sprites/spriteSheet.png"
         this.currentStep = "left"
@@ -120,6 +122,12 @@ export class Pax {
     setPos(pos) {
         this.y = pos[0];
         this.x = pos[1];
+        this.iY = pos[0];
+        this.iX = pos[1];
+    }
+    resetPos(){
+        this.y = this.iY;
+        this.x = this.iX;
     }
 
     init(game) {
@@ -159,7 +167,10 @@ export class Pax {
         if (this.game.data.frames % 4 === 0) {
             this.currentFrame++;
         }
+
+
         if (this.game.data.frames % 16 === 0) {
+
             this.x += this.dx;
             this.y += this.dy;
             let x = Math.round((this.x));
