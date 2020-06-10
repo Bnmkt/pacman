@@ -1,3 +1,3 @@
 "# pacman" 
 
-[Version live](http://seanferrara.be/pacman)
+[Version live](https://bnmkt.000webhostapp.com/pacman/)
